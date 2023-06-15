@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Birthdays</title>
+    <style>
+        body {
+            background-image: url("wallpaper.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+        }
+        
+        .gif-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="nameForm">
+            <input type="text" id="nameInput" placeholder="Enter a name">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+    <div class="gif-container">
+        <img id="gifImg" src="gif.gif" alt="GIF" width="300" height="300">
+    </div>
+    
+    <script>
+        document.getElementById("nameForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            var name = document.getElementById("nameInput").value.toLowerCase();
+            if (name === "chintu") {
+                window.location.href = "nextpage1.html";
+            } else {
+                window.location.href = "nextpage2.html";
+            }
+        });
+    </script>
+</body>
+</html>
